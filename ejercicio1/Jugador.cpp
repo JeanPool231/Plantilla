@@ -8,6 +8,7 @@ Jugador::Jugador(int x, int y) : Entidad(x, y) {
 	ancho = 272 / 4;
 	alto = 288 / 4;
 	escala = 1;
+	velocidad = 10;
 	direccion = Direccion::NINGUNA;
 	ultimaDireccion = Direccion::ABAJO;
 	inicializarFrames();
@@ -47,18 +48,18 @@ void Jugador::mover(Direccion direccionInput, int anchoForm, int altoForm, Graph
 		break;
 	case Direccion::ARRIBA:
 		dx = 0;
-		dy = -10;
+		dy = -(velocidad);
 		break;
 	case Direccion::ABAJO:
 		dx = 0;
-		dy = 10;
+		dy = velocidad;
 		break;
 	case Direccion::IZQUIERDA:
-		dx = -10;
+		dx = -(velocidad);
 		dy = 0;
 		break;
 	case Direccion::DERECHA:
-		dx = 10;
+		dx = velocidad;
 		dy = 0;
 		break;
 	}

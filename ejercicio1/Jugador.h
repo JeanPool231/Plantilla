@@ -10,7 +10,7 @@ enum class AnimacionJugador
 
 class Jugador : public Entidad {
 private:
-    int vidas, ancho, alto, dx, dy;
+    int vidas, ancho, alto, dx, dy, velocidad;
     double escala;
 
     AnimacionJugador estadoActual;
@@ -49,4 +49,7 @@ public:
 
     int getDy() const { return dy; }
     void setDy(int dy) { this->dy = dy; }
+
+    int getVelocidad() const { return velocidad; }
+    void setVelocidad(int velocidad) { this->velocidad = velocidad; }
 };
