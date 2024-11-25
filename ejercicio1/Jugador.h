@@ -2,11 +2,9 @@
 #include "Entidad.h"
 #include <vector>
 
-enum class AnimacionJugador
-{
+enum class AnimacionJugador {
     QUIETO, MOVIENDOSE
 };
-
 
 class Jugador : public Entidad {
 private:
@@ -25,6 +23,10 @@ private:
 
     void inicializarFrames();
     void actualizarAnimacion();
+    void calcularMovimiento(Direccion direccionInput);
+    void limitarMovimiento(int anchoForm, int altoForm);
+    const std::vector<Frame>* obtenerFramesActuales() const;
+    void calcularFrame(int& frameX, int& frameY, const std::vector<Frame>* framesActuales) const;
 
 public:
     Jugador(int x, int y);
@@ -33,7 +35,6 @@ public:
     void mostrar(Graphics^ g, Bitmap^ bmp) override;
     void mover(Direccion direccion, int anchoForm, int altoForm, Graphics^ g, Bitmap^ bmp);
     void dibujar(Graphics^ g, Bitmap^ bmp);
-
 
     int getVidas() const { return vidas; }
     void setVidas(int vidas) { this->vidas = vidas; }
