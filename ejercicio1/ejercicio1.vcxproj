@@ -118,9 +118,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Controlador.cpp" />
+    <ClCompile Include="Jugador.cpp" />
     <ClCompile Include="MyForm.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Controlador.h" />
+    <ClInclude Include="Entidad.h" />
+    <ClInclude Include="Jugador.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
