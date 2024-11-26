@@ -31,5 +31,7 @@ public:
     virtual ~Entidad() {}
 
     virtual void mostrar(Graphics^ g, Bitmap^ bmp) = 0;
+    int getX()  { return x; }
+    int getY()  { return y; }
 
 };

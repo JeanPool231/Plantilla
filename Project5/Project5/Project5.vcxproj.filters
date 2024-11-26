@@ -18,15 +18,6 @@
     <ClCompile Include="MyForm.cpp">
       <Filter>Header Files</Filter>
     </ClCompile>
-    <ClCompile Include="Jugador.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Controlador.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Proyectil.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyForm.h">
@@ -35,13 +26,19 @@
     <ClInclude Include="Jugador.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Entidad.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Controlador.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Proyectil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemigo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Direcciones.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ControladorArchivos.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
