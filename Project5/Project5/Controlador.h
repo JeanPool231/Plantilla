@@ -7,7 +7,6 @@
 #include <vector>
 #include <cstdlib>
 #include <ctime>
-
 using namespace std;
 using namespace System::Drawing;
 

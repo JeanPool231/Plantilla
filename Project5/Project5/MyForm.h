@@ -2,7 +2,7 @@
 
 #include "Controlador.h"
 #include "ControladorArchivos.h"
-
+#include "fstream"
 namespace Project5 {
 
     using namespace System;
@@ -83,6 +83,17 @@ namespace Project5 {
             delete bmpProyectil;
             delete bmpEnemigo;
             delete buffer;
+            std::ofstream GuardarBin;
+            GuardarBin.open("PuntajesBin.dat", std::ios::app | std::ios::binary);
+            if (GuardarBin.is_open()) {
+
+                int puntaje = controlador->getContadorEnemigosMuertos();
+
+                GuardarBin.write((const char*)&puntaje, sizeof(puntaje));
+                char saltoDeLinea = '\n';
+                GuardarBin.write(&saltoDeLinea, sizeof(saltoDeLinea));
+                GuardarBin.close();
+            }
         }
 
     private:
@@ -232,7 +243,10 @@ namespace Project5 {
 
         void SalirJuego(Object^ sender, EventArgs^ e) {
             // Salir de la aplicación
+        
             Application::Exit();
+            
+
         }
 
         // Método para manejar la pulsación de teclas
